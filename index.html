@@ -1,0 +1,53 @@
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#000000">
+        <!-- Tell the browser it's a PWA -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <!-- Tell iOS it's a PWA -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href=".\main.css">
+        <link rel="manifest" href="manifest.json">
+        <link rel="apple-touch-icon" sizes="512x512" href="Emojione1_1F3B1.svg.png">
+        <link rel="shortcut icon" href="favicon.ico">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <title>React App</title>
+</head>
+
+<body>
+     <!--   npm install materialize-css@next -->
+    <div id="container">
+            <form id="myForm">
+                    <img src ="Emojione1_1F3B1.svg.png" class = "img-responsive" alt="the ball">
+                    </div>
+                    <br/>
+                    <div id="question">
+                        <p id="response" class="centered" >Hello there</p>
+                        <br/>
+                        <input placeholder="enter your question" >
+                        <button type="submit">Ask the magic 8 ball</button>
+                    </div>
+            </form>
+    </div>
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+            let aChoices = [
+                "certainly",
+                "very likely",
+                "no"
+            ];
+            let nChoice = Math.floor(Math.random() * aChoices.length);
+            document.getElementById("response").innerHTML = aChoices[nChoice];
+
+            event.preventDefault()
+        });
+    </script>
+
+</body>

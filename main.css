@@ -1,0 +1,22 @@
+#container 
+{
+max-width: 960px;
+text-align: center;
+margin: auto;
+}
+
+#myForm {
+    max-width: 560px;
+    margin:auto;
+}
+#response {
+    font: arial;
+    font-size: 2em;
+    color: aquamarine;
+    margin-top: 1em;
+}
+#question {
+    width:40%;
+    text-align: center;
+    margin:auto;
+}
